@@ -1,209 +1,193 @@
 import Head from 'next/head'
+import MenuBar  from '../pages/menubar'
+import styles from '../styles/main.module.css'
+import  { ScrollRotate } from 'react-scroll-rotate';
+
 
 export default function Home() {
   return (
-    <div className="container">
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Grand Bazaar</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500;700;800&family=Fredoka:wght@500&family=Kufam&family=Nunito:wght@200;300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,900&display=swap" rel="stylesheet" />
+     </Head>
+     <div className={styles.menuContainer}>
+            <MenuBar/> 
+      </div>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className={styles.splashWrapper}>
+        <div className={styles.headerGb}>
+           Grand Bazaar 
+          <div className={styles.arabicHeader}>
+            البازار الكبير
+          </div>
         </div>
-      </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
+          <ScrollRotate from={-20} to={40} method={"perc"} loops={1} animationDuration={0.1}> 
+          <div className={styles.rectangelHolder}>
+            <img  src="/imgs/white-cube.png" width="100%" className={styles.whiteRect}/>
+            
+          </div>
+          </ScrollRotate>
+          {/* <div className={styles.rectangelHolderGrey}>
+            <img  src="/imgs/grey-cube.png" width="100%" className={styles.greyRect}/>
+          </div> */}
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+        </div> 
+        <div className={styles.mintWrapper}>
+          <div className={styles.mintModal}>
+            <div className={styles.mintHeader}>
+              Claim A 
+              Paradise Palace
+            </div>
+            <br/> 
+            <div className={styles.mintText}>
+            The Paradise Palaces are Grand Bazaar’s
+             first collection randomly generated on-chain. 
+             This collection will include a total of 7,777 Palaces
+              with rarity built in. Owners of the Palaces will have
+               full IP and special access to our Grand Bazaar Marketplace
+                <br/> <br/>
+                Rug Owner Mint Cost ........... 1 eth <br/>
+                Allowlist Mint Cost ...........  2 eth <br/>
+                Public Mint Cost ...........  3 eth 
+            </div>
+            <br/>  <br/> 
+            <div className={styles.mintButton}>
+                MINT
+            </div>
+            <br/> 
+          </div>
+        </div>
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+        <div className={styles.roadmapWrapper}>
+          <div className={styles.roadmapHeader}>
+            ROADMAP
+          </div>
+          <br/>  
+          <div className={styles.roadmapBlocks}>
+            <div className={styles.roadmapRow}>
+              <div className={styles.roadmapBlock}>
+              <b> 10% </b> <br/>
+                Framed Paradise Palace Prints 
+                (5 to Paradise Palace owners, 5 
+                to Genesis Rug owners)
+              </div>
+              <div className={styles.roadmapBlock}>
+                 <b> 20% </b> <br/>
+                Framed Paradise Palace Prints 
+                (5 to Paradise Palace owners, 5 
+                to Genesis Rug owners)
+              </div>
+              <div className={styles.roadmapBlock}>
+                 <b> 30% </b> <br/>
+                Framed Paradise Palace Prints 
+                (5 to Paradise Palace owners, 5 
+                to Genesis Rug owners)
+              </div>
+            </div>
+            <div className={styles.roadmapRow}>
+              <div className={styles.roadmapBlock}>
+              <b> 40% </b> <br/>
+                Framed Paradise Palace Prints 
+                (5 to Paradise Palace owners, 5 
+                to Genesis Rug owners)
+              </div>
+              <div className={styles.roadmapBlock}>
+                 <b> 50% </b> <br/>
+                Framed Paradise Palace Prints 
+                (5 to Paradise Palace owners, 5 
+                to Genesis Rug owners)
+              </div>
+              <div className={styles.roadmapBlock}>
+                 <b> 60% </b> <br/>
+                Framed Paradise Palace Prints 
+                (5 to Paradise Palace owners, 5 
+                to Genesis Rug owners)
+              </div>
+            </div>
+            <div className={styles.roadmapRow}>
+              <div className={styles.roadmapBlock}>
+              <b> 70% </b> <br/>
+                Framed Paradise Palace Prints 
+                (5 to Paradise Palace owners, 5 
+                to Genesis Rug owners)
+              </div>
+              <div className={styles.roadmapBlock}>
+                 <b> 80% </b> <br/>
+                Framed Paradise Palace Prints 
+                (5 to Paradise Palace owners, 5 
+                to Genesis Rug owners)
+              </div>
+              <div className={styles.roadmapBlock}>
+                 <b> 90% </b> <br/>
+                Framed Paradise Palace Prints 
+                (5 to Paradise Palace owners, 5 
+                to Genesis Rug owners)
+              </div>
+            </div>
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+          </div>
+        </div>
 
-        footer img {
-          margin-left: 0.5rem;
-        }
+        <div className={styles.rugWrapper}>
+          {/* <div className={styles.circleWrapper}> 
+            <svg width="100%" height="100%">
+              <circle cx="100" cy="350" r="400" stroke="white" stroke-width="4" fill="white" />
+            </svg>
+          </div> */}
+         <div className={styles.rugModal}>
+            <div className={styles.rugHeader}>
+              RUGS
+            </div> <br/>
+            <div className={styles.rugText}>
+            Only 77 of our 3D Persian Rugs will 
+            ever exist. Owners of these special NFTs
+             will receive the most exclusive benefits 
+             such as early mint, cheaper mint, and higher 
+             mint caps for future collections. Rug owners
+              will also be given the exclusive opportunity
+               to become a Grand Bazaar Merchant. Merchants 
+               will be given a shop within our Grand Bazaar
+                Marketplace where they can display and sell goods
+                 (physical and digital) that are approved by 
+                 the Grand Bazaar (guidelines to be released).
+                  Join our Discord for more information on the
+                   Grand Bazaar Marketplace.
 
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+            </div>
+            
+          </div>
+        </div>
 
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+        <div className={styles.teamWrapper}>
+        <div className={styles.teamHeader}>
+            TEAM
+          </div> <br/>
+          <div className={styles.teamMembers}>
+            <div className={styles.teamMember}>
+              <img  src="/imgs/team/butteredtoast.jpeg" width="100%" className={styles.teamImage}/>
+              <div className={styles.teamText}>
+                Buttered Toast
+              </div>
+            </div>
+            <div className={styles.teamMember}>
+              <img  src="/imgs/team/dottoncreative.jpeg" width="100%" className={styles.teamImage}/>
+              <div className={styles.teamText}>
+                Dotton Creative
+              </div>
+            </div>
+            <div className={styles.teamMember}>
+              <img  src="/imgs/team/zollywood.jpeg" width="100%" className={styles.teamImage}/>
+              <div className={styles.teamText}>
+                Zollywood
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   )
 }

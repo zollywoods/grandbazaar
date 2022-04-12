@@ -1,0 +1,23 @@
+:root {
+
+}
+
+body{
+    margin:0;
+    padding:0;
+    height: 100%;
+    width: 100%;
+    background: rgb(26, 26, 26);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    display: block;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+}
+
+
+
