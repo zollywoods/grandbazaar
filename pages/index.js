@@ -131,6 +131,9 @@ export default function Home() {
             </div>
 
           </div>
+          <div className={styles.palaceRow}>
+            <img src='/imgs/palaceRow.png' width = "100%" className={styles.palaceRowImage}/>
+          </div>
         </div>
 
         <div className={styles.rugWrapper}>
@@ -161,6 +164,8 @@ export default function Home() {
             </div>
             
           </div>
+
+ 
         </div>
 
         <div className={styles.teamWrapper}>
