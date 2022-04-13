@@ -2,6 +2,9 @@ import Head from 'next/head'
 import MenuBar  from '../pages/menubar'
 import styles from '../styles/main.module.css'
 import  { ScrollRotate } from 'react-scroll-rotate';
+import Slide from 'react-reveal/Slide';
+
+
 
 
 export default function Home() {
@@ -132,7 +135,13 @@ export default function Home() {
 
           </div>
           <div className={styles.palaceRow}>
-            <img src='/imgs/palaceRow.png' width = "100%" className={styles.palaceRowImage}/>
+          <Slide left>
+            <img src='/imgs/rows/top.png' width = "100%" className={styles.palaceRowTop}/>
+          </Slide>
+          <Slide right>
+            <img src='/imgs/rows/middle.png' width = "100%" className={styles.palaceRowMiddle}/>
+          </Slide> 
+            <img src='/imgs/rows/bottom.png' width = "100%" className={styles.palaceRowImage}/>
           </div>
         </div>
 
