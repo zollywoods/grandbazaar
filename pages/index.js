@@ -71,6 +71,7 @@ export default function Home() {
             ROADMAP
           </div>
           <br/>  
+          <Slide left cascade> 
           <div className={styles.roadmapBlocks}>
             <div className={styles.roadmapRow}>
               <div className={styles.roadmapBlock}>
@@ -132,8 +133,8 @@ export default function Home() {
                 to Genesis Rug owners)
               </div>
             </div>
-
           </div>
+          </Slide>
           <div className={styles.palaceRow}>
           <Slide left>
             <img src='/imgs/rows/top.png' width = "100%" className={styles.palaceRowTop}/>
