@@ -11,6 +11,11 @@ body{
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     display: block;
+    /* min-height: 100vh;
+    min-height: -webkit-fill-available; */
+    /* height: 100vh;
+    overflow: hididen; */
+  
 }
 
 html{
@@ -19,5 +24,16 @@ html{
     scroll-behavior: smooth;
 }
 
+a{
+    color: inherit; /* blue colors for links too */
+    text-decoration: none;
+}
 
 
+a:visited{
+    color: inherit; /* blue colors for links too */
+    text-decoration: none;
+}
+
+
+.web3modal-modal-lightbox { z-index: 1200 !important; }
