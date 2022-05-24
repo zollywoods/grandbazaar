@@ -23,11 +23,17 @@ function Mint() {
             {/* trigger a modal that aks how many you want to mint 
             with a little number box and a mint button below it 
             then mint */}
-            <div className={styles.mintButton} onClick = {() => mint(1)} >
-                  MINT
-              </div> 
+            <id className={styles.mintAndInput}>
+                <div className={styles.mintButton} onClick = {() => mint(inputValue)} >
+                    MINT
+                </div> 
+                <div className={styles.inputButton} >
+                <b>  <input type="number"    min="1" max="20"  value={inputValue} onInput={(e) => setInputValue(e.target.value)} id="mintButtonYang"/>   </b>
+
+                </div> 
+            </id>
+
             {/* <b> <button id="mintButton" onClick = {() => mint(1)}> MINT </button> </b> */}
-            {/* <b>  <input type="number" min="1" max="20"  value={inputValue} onInput={(e) => setInputValue(e.target.value)} id="mintButtonYang"/>   </b> */}
         </div>
    
     );

@@ -12,6 +12,7 @@ import Mint from './mint';
 
 export default function Home() {
   let [dropDown, setDropDown] = useState(styles.mobileDrop);
+  let [mintVisibility, setMintVisibility] = useState(styles.mintBoxHidden);
 
   function dropMenu() {
     if(dropDown === styles.mobileDrop){
@@ -21,6 +22,15 @@ export default function Home() {
     if(dropDown === styles.mobileDropVisible){
       console.log("changing visibility")
       setDropDown(styles.mobileDrop)
+    }
+  }
+
+  function toggleMintBox() {
+    if(mintVisibility === styles.mintBoxHidden){
+      setMintVisibility(styles.mintBox)
+    }
+    else{
+      setMintVisibility(styles.mintBoxHidden)
     }
   }
   
@@ -63,7 +73,8 @@ export default function Home() {
         <div className={styles.headerGb}>
            Grand Bazaar 
           <div className={styles.arabicHeader}>
-            البازار الكبير
+          بازار بزرگ
+
           </div>
         </div>
 
@@ -85,6 +96,14 @@ export default function Home() {
         </div> 
         <a name="mintWrapper"> 
         <div id={styles.mintWrapper}>
+
+
+            <div id={mintVisibility}>
+                <div className={styles.closeButton} onClick = {toggleMintBox}> X </div>
+            </div>
+
+
+
           <div className={styles.mintModal}>
             <div className={styles.mintHeader}>
               Mint A Paradise Palace
@@ -97,21 +116,25 @@ export default function Home() {
              goal is to convert our Palaces into Metaverse-ready NFTs
               for you all to enjoy on Metaverse Land we purchase for the community.   
                 <br/> <br/>
-                Supply = 7,777 <br/> 
-                Token = ERC721 <br/> 
-                <br/> 
+       
                 Rug Owner Mint Cost ........... 0.025 eth <br/>
                 Allowlist Mint Cost ........... 0.032 eth <br/>
                 Public Mint Cost ........... 0.038 eth
             </div>
             <br/>  <br/> 
             <Bounce> 
-              <Mint/>
+                <Mint/>
                <br/>
               <div className={styles.openseaButton}>
                   <a target="_blank"  href="https://opensea.io/collection/grandbazaarpalaces"> OPENSEA </a>
               </div>
             </Bounce>
+            <br/><br/><br/>
+            <div className={styles.mintSupply}>
+                Supply = 7,777 <br/> 
+                Token = ERC721 <br/> 
+            </div>
+
             <br/> 
           </div>
         </div>
@@ -194,13 +217,13 @@ export default function Home() {
                 goods (physical and digital) that are approved
                  by the Grand Bazaar (guidelines to be released).
                   Join our Discord for more information on the
-                   Grand Bazaar Marketplace.            </div> <br/> 
-                   Supply = 77 <br/> 
-                  Token = ERC1155 <br/> <br/> <br/> 
+                   Grand Bazaar Marketplace.            </div> <br/>  <br/> 
                   <div className={styles.openseaButton}>
-                  <a target="_blank" href="https://opensea.io/collection/grandbazaar"> OPENSEA </a>
-              </div>
-              <br/> 
+                  <a target="_blank" href="https://opensea.io/collection/grandbazaar"> OPENSEA </a> 
+              </div> <br/>  <br/>  <br/>
+              Supply = 77 <br/> 
+                  Token = ERC1155 <br/> <br/>
+
           </div>
           <div className={styles.rugModel}>
           <model-viewer id={styles.rug} alt="Neil Armstrong's Spacesuit from the 
@@ -261,16 +284,19 @@ export default function Home() {
         <div className={styles.footerWrapper}>
           <div className={styles.footerLogos}>
             <div className={styles.logo}>
-              <img  src="/imgs/logos/opensea.svg" width="100%" />
+              <a href="https://opensea.io/collection/grandbazaar"> <img  src="/imgs/logos/opensea.svg" width="100%" /> </a>
             </div>
             <div className={styles.logo}>
-              <img  src="/imgs/logos/twitter.svg" width="100%" />
+               <a href="https://twitter.com/grandbazaar_nft"> <img  src="/imgs/logos/twitter.svg" width="100%" />  </a> 
             </div>
             <div className={styles.logo}>
-              <img  src="/imgs/logos/instagram.svg" width="100%" />
+             <a href="https://www.instagram.com/grand_bazaar_nft/">  <img  src="/imgs/logos/instagram.svg" width="100%" /> </a> 
             </div>
             <div className={styles.logo}>
-              <img  src="/imgs/logos/etherscan.png" width="100%" />
+             <a href="https://etherscan.io/address/0x1D60BAf4769E557FB37BC4886FD3B96d50d58Af8#code">  <img  src="/imgs/logos/etherscan.png" width="100%" /> </a>
+            </div>
+            <div className={styles.logo}>
+             <a href="https://discord.gg/95UhEBp2Rj">  <img  src="/imgs/logos/discord-white.svg" width="80%" /> </a>
             </div>
           </div>
           <div className={styles.footerHeader}>

@@ -172,9 +172,58 @@
     padding-bottom: 10%;
 }
 
+#mintBoxHidden{
+    display: none;
+}
+
+#mintBox{
+    position: fixed;
+    top: 40vh;
+    width: 30%;
+    height: 30%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: rgb(249, 249, 249);
+
+    border-style: solid;
+    border-width: 6px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 20px;
+   
+
+    z-index: 5000;
+}
+
+ /* #mintWrapper:not(#mintBox){
+    filter: blur(3px);
+} */
+
+.mintAndInput{
+    width: 30%;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+.closeButton{
+    font-weight: 800;
+    font-size: 1.5em;
+
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.closeButton:hover{
+    cursor: pointer;
+}
+
+
 .mintModal{
     background-color: #fefef0;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     border-style: solid;
     border-width: 6px;
@@ -197,10 +246,12 @@
     text-align: justify;
 }
 
+.mintSupply{
+    text-align: center;
+}
+
 .mintButton{
     background-color: lightgreen;
-    width: 30%;
-    margin: 0 auto;
     border-style: solid;
     border-width: 4px;
     border-color: black;
@@ -211,10 +262,37 @@
     font-weight: 500;
     box-shadow: 10px 5px #888888;
     margin-top: 3px;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 70%;
+
 }
 
+.inputButton{
+    background-color: lightgreen;
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    font-size: 2.2em;
+    font-weight: 500;
+    box-shadow: 10px 5px #888888;
+    margin-top: 3px;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 30%;
+
+}
+
+
+
+
 .mintButton:hover{
-    box-shadow: 8px 3px #888888;
+    /* box-shadow: 8px 3px #888888; */
     cursor: pointer;
 }
 
@@ -270,70 +348,91 @@
 }
 
 .roadmapRow{
-    display: flex;
+    /* display: flex; */
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
 }
 
 .roadmapBlock{
-    background-color: #F8FFCA;
+    background-color: #f0f7fe;
     margin: 0 auto;
     border-style: solid;
     border-width: 5px;
     border-color: black;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 20px;
     margin-left: 20px;
     font-size: .95em;
     font-weight: 300;
-    width: 20%;
-    height: 150px;
+    text-align:center;
+
+    width: 40%;
+    margin:  0 auto;
+    padding: 30px;
+    margin-top: 20px;
 }
 
 .rmbTwo{
-    background-color: #B6D084;
+    background-color: #dbecff;
     margin: 0 auto;
     border-style: solid;
     border-width: 5px;
     border-color: black;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 20px;
     margin-left: 20px;
     font-size: .95em;
     font-weight: 300;
-    width: 20%;
-    height: 150px;
+    text-align:center;
+    
+    width: 40%;
+    margin:  0 auto;
+    padding: 30px;
+    margin-top: 20px;
+
 }
 
 .rmbThree{
-    background-color: #FFCB32;
+    background-color: #b7daff;
     margin: 0 auto;
     border-style: solid;
     border-width: 5px;
     border-color: black;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 20px;
     margin-left: 20px;
     font-size: .95em;
     font-weight: 300;
-    width: 20%;
-    height: 150px;
+    margin-top: 20px;
+
+    text-align:center;
+    width: 40%;
+    margin:  0 auto;
+    padding: 30px;
+    margin-top: 20px;
+
+
 }
 
 .rmbFour{
-    background-color: #2F7604;
+    background-color:  #89c2ff;
     margin: 0 auto;
     border-style: solid;
     border-width: 5px;
     border-color: black;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 20px;
     margin-left: 20px;
     font-size: .95em;
     font-weight: 300;
-    width: 20%;
-    height: 150px;
+    width: 40%;
+    margin:  0 auto;
+    padding: 30px;
+    text-align:center;
+    margin-top: 20px;
+
+
 }
 
 
@@ -355,7 +454,7 @@
 }
 
 .phases{
-    font-size: 2vw;
+    font-size: 2.6vw;
 }
 
 .palaceRow{
@@ -747,7 +846,14 @@ model-viewer#rug{
     }
 
     .mintButton{
-        width: 38%;
+        width: 70%;
+    }
+
+    .mintAndInput{
+        width: 60%;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
     }
 
     .openseaButton{
@@ -781,7 +887,7 @@ model-viewer#rug{
     }
 
     .rmbTwo{
-        background-color: #deffdc;
+        background-color: #dbecff;
         padding: 20px;
         font-size: .9em;
         font-weight: 500;

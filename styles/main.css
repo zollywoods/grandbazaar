@@ -18,6 +18,16 @@ body{
   
 }
 
+/* body > *:not(#mintBox > *){
+    filter: blur(3px);
+}
+   */
+
+   /* body > div > #mintWrapper > *:not(#mintBox){
+    filter: blur(3px);
+    } */
+
+
 html{
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden; 
@@ -37,3 +47,22 @@ a:visited{
 
 
 .web3modal-modal-lightbox { z-index: 1200 !important; }
+
+input[type="number"]
+{
+    background: transparent;
+    border: none;
+    outline: none;
+
+    height: 80%;
+    font-size: .9em;
+    font-weight: 600;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
