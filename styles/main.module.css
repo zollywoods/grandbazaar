@@ -984,6 +984,14 @@ model-viewer#rug{
         width: 98%;
     }
 
+
+.teamImage{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 3.5px;
+}
+
     .footerLogos{
         margin: 0 auto;
         color: white;
