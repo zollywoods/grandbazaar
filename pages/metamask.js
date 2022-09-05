@@ -244,9 +244,9 @@ function MetamaskButton() {
                     <div className={styles.menuWord}>
                         <a href="#mintWrapper"> Mint </a>
                     </div>       
-                    <div className={styles.menuWord}>
+                    {/* <div className={styles.menuWord}>
                         <a href="#roadmapWrapper"> Roadmap </a>
-                    </div>       
+                    </div>        */}
                     <div className={styles.menuWord}>
                         <a href="#rugWrapper"> Rugs </a>  
                     </div>   
