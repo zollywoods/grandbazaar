@@ -53,9 +53,9 @@ export default function Home() {
           <div ClassName={styles.dropDownItem} onClick={dropMenu}>
               <a href="#mintWrapper"> MINT </a>
           </div>
-          <div ClassName={styles.dropDownItem} onClick={dropMenu}>
+          {/* <div ClassName={styles.dropDownItem} onClick={dropMenu}>
               <a href="#roadmapWrapper"> ROADMAP </a>
-          </div>
+          </div> */}
           <div ClassName={styles.dropDownItem} onClick={dropMenu} >
               <a href="#rugWrapper"> RUGS </a>
           </div>
@@ -140,7 +140,7 @@ export default function Home() {
         </div>
         </a>
 
-        <a name="roadmapWrapper"> 
+        {/* <a name="roadmapWrapper"> 
         <div id={styles.roadmapWrapper}>
           <div className={styles.roadmapHeader}>
             PALACE ROADMAP
@@ -163,23 +163,6 @@ export default function Home() {
                   Grand Bazaar Marketplace (initiated by 100% minted)             
               </div>
             </div>
-            {/* <div className={styles.roadmapRow}>
-              <div className={styles.roadmapBlock}>
-              <b> 80% </b> <br/>
-              Blue Chip NFT giveaway
-               (1 to palaces owners, 1 to rug & palace owners)
-              </div>
-              <div className={styles.roadmapBlock}>
-                 <b> 100% </b> <br/>
-                 Begin Production of Grand
-                  Bazaar Metaverse-Ready Paradise Palaces               </div>
-              <div className={styles.roadmapBlockHidden}>
-                 <b> 60% </b> <br/>
-                Framed Paradise Palace Prints 
-                (5 to Paradise Palace owners, 5 
-                to Genesis Rug owners)
-              </div>
-            </div> */}
           </div>
           <div className={styles.palaceRow}>
           <Slide left>
@@ -191,7 +174,7 @@ export default function Home() {
             <img src='/imgs/rows/bottom.png' width = "100%" className={styles.palaceRowImage}/>
           </div>
         </div>
-        </a>
+        </a> */}
 
         <a name="rugWrapper"> 
         <div className={styles.rugWrapper}>

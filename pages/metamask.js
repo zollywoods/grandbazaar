@@ -83,6 +83,7 @@ function MetamaskButton() {
 
 
   if ( provider !== undefined) {
+    try{
               provider.on("accountsChanged", (accounts) => {
               if(selectedAccount === undefined){
                 setButtonText("Connect With MetaMask");
@@ -93,14 +94,30 @@ function MetamaskButton() {
                 selectedAccount = accounts[0];
                 console.log(`Selected account changed to ${selectedAccount}`);
               }
-        });
+        }
+        
+        
+        );
     }
+    catch (error){
+      console.log(error)
+      return
+    }
+  }
       
       if( provider !== undefined )    {
-        gbContract = new web3.eth.Contract(
-          contractABI,
-          contractAddress
-        );
+        try{
+          gbContract = new web3.eth.Contract(
+            contractABI,
+            contractAddress
+          );
+        }
+        catch (error){
+          console.log(error)
+          return
+      }
+
+    
         
       }
 
@@ -116,22 +133,28 @@ function MetamaskButton() {
           }
         // setCachedProvider(provider)
         web3 = new Web3(provider);    
+          try{
+            web3.eth.getAccounts()
+            .then(async (addr) => {
+              console.log(addr);
+              if(addr.length === 0){
+                setButtonText("Connect Your Wallet", String(selectedAccount));
+                setButtonStyle(styles.connectButton);
+              }
+              else{
+                const accounts = await web3.eth.getAccounts();
+                selectedAccount = accounts[0];
+                console.log(`Selected account is ${selectedAccount}`);
+                setButtonText("Connected");
+                setButtonStyle(styles.connectedButton);
+              }
+            });
+          }
+          catch (error){
+            console.log(error)
+            return
+        }
 
-        web3.eth.getAccounts()
-              .then(async (addr) => {
-                console.log(addr);
-                if(addr.length === 0){
-                  setButtonText("Connect Your Wallet", String(selectedAccount));
-                  setButtonStyle(styles.connectButton);
-                }
-                else{
-                  const accounts = await web3.eth.getAccounts();
-                  selectedAccount = accounts[0];
-                  console.log(`Selected account is ${selectedAccount}`);
-                  setButtonText("Connected");
-                  setButtonStyle(styles.connectedButton);
-                }
-              });
        }
 
        const hoverOverConnected = async () => {
@@ -169,7 +192,7 @@ function MetamaskButton() {
       useEffect(() => {
         const checkConnection = async () => {
 
-          
+          try{
           if (web3Modal.cachedProvider) {
             provider = await web3Modal.connect();
             web3 = new Web3(provider);
@@ -193,11 +216,22 @@ function MetamaskButton() {
           else{
             setButtonText("Connect Your Wallet", String(selectedAccount));
             setButtonStyle(styles.connectButton);
+          }
+        }
+        catch (error){
+          console.log(error)
+          return
       }
 
             
       };
-      checkConnection();
+      try{
+        checkConnection();
+      }
+      catch (error){
+        console.log(error)
+        return
+    }
   }, []);
 
       isInitialized = true;
